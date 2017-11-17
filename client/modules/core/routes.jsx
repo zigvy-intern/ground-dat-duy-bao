@@ -5,6 +5,7 @@ import Footer from '../items/components/Footer.jsx';
 import Register from '../users/components/Register.jsx';
 import Body from '../items/components/Body.jsx';
 import Login from '../users/components/Login.jsx';
+import Ground from '../items/components/GroundFind.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -13,6 +14,14 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<Footer />)
+      });
+    }
+  });
+  FlowRouter.route('/grounds', {
+    name: 'ground.list',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Ground />)
       });
     }
   });

@@ -3,11 +3,11 @@ import {Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup
 import FontAwesome from 'react-fontawesome';
 
 const Footer = ({content}) => (
-<div><Navbar style={{bottom:"0",position:"absolute",width:"100%"}} >
+<div><Navbar style={{bottom:"0",width:"100%"}} >
 
      <Navbar.Header >
        <Navbar.Brand>
-         <a href="#"><img src= "https://i.imgur.com/TZ96sKM.png" height="29" width="auto"/></a>
+         <a href="http://localhost:3000/"><img src= "https://i.imgur.com/TZ96sKM.png" height="29" width="auto"/></a>
        </Navbar.Brand>
        <Navbar.Toggle />
      </Navbar.Header>
