@@ -6,7 +6,7 @@ const Layout = ({content}) => (
         <Navbar inverse style={{backgroundColor:"black"}} collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#"><img src= "https://i.imgur.com/0hzaXxK.png" height="29" width="auto"/></a>
+              <a href="http://localhost:3000/"><img src= "https://i.imgur.com/0hzaXxK.png" height="29" width="auto"/></a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -20,7 +20,7 @@ const Layout = ({content}) => (
            </Navbar.Form>
            <Nav>
              <NavItem eventKey={1} href="#">Find Match</NavItem>
-             <NavItem eventKey={2} href="#">Grounds</NavItem>
+             <NavItem eventKey={2} href="http://localhost:3000/grounds">Grounds</NavItem>
              <NavItem eventKey={3} href="#">Messages</NavItem>
              <NavItem eventKey={4} href="#">Upcoming</NavItem>
            </Nav>
@@ -36,7 +36,9 @@ const Layout = ({content}) => (
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        <Row>
         {content()}
+        </Row>
 
 
 
