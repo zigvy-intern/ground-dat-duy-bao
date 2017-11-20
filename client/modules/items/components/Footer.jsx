@@ -3,7 +3,7 @@ import {Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup
 import FontAwesome from 'react-fontawesome';
 
 const Footer = ({content}) => (
-<div><Navbar style={{bottom:"0",width:"100%"}} >
+<div><Navbar style={{bottom:"-350",position:"absolute",width:"100%"}} >
 
      <Navbar.Header >
        <Navbar.Brand>

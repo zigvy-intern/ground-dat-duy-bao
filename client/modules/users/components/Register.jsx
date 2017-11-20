@@ -14,7 +14,7 @@ class Register extends React.Component {
               {error ? <p style={{color: 'red'}}>{error}</p> : null}
               <form>
                 <FormGroup>
-                <FormControl inputRef={user => this.refMail = user} type="user" placeholder="User" />
+                <FormControl inputRef={user => this.refUser = user} type="user" placeholder="User Name" />
                 <FormControl inputRef={mail => this.refMail = mail} type="email" placeholder="Email" />
                 <FormControl inputRef={password => this.refPass = password} type="password" placeholder="Password" />
 

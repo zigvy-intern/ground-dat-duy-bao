@@ -6,6 +6,7 @@ import Register from '../users/components/Register.jsx';
 import Body from '../items/components/Body.jsx';
 import Login from '../users/components/Login.jsx';
 import Ground from '../items/components/GroundFind.jsx';
+import GroundInfo from '../items/components/GroundInfo.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -17,11 +18,21 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
+
   FlowRouter.route('/grounds', {
     name: 'ground.list',
     action() {
       mount(MainLayoutCtx, {
         content: () => (<Ground />)
+      });
+    }
+  });
+
+  FlowRouter.route('/groundinfo', {
+    name: 'ground.info',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<GroundInfo />)
       });
     }
   });
@@ -51,5 +62,4 @@ export default function (injectDeps, {FlowRouter}) {
       FlowRouter.go('/');
     }
   });
-
 }
