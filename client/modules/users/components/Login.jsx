@@ -14,7 +14,9 @@ import Footer from '../../items/components/Footer.jsx'
                       <form>
                         <FormGroup>
                           <FormControl inputRef={mail => this.refMail = mail} type="email" placeholder="Email" />
+                          <br/>
                           <FormControl inputRef={password => this.refPass = password} type="password" placeholder="Password" />
+                          <br/>
                           <Button onClick={this.login.bind(this)}
                           bsStyle="primary" type="submit" >Login </Button>
                         </FormGroup>

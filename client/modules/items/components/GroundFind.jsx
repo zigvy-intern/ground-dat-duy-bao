@@ -44,7 +44,7 @@ const Ground = ({ground}) => (
     <Grid>
     <Row>
     <Col xs={6} md={4}>
-      <Thumbnail ><a href=""><img src="http://stadiumdb.com/pic-projects/stamford_bridge/stamford_bridge08.jpg" style={{width:"335",height:"250"}} alt="240x200" /></a>
+      <Thumbnail ><a href="http://localhost:3000/groundinfo"><img src="http://stadiumdb.com/pic-projects/stamford_bridge/stamford_bridge08.jpg" style={{width:"335",height:"250"}} alt="240x200" /></a>
         <h3>Stamford Bridge</h3>
         <p>Born to serve Abramovich</p>
 

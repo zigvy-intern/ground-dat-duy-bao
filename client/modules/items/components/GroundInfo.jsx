@@ -1,12 +1,13 @@
 import React from 'react';
 import { PageHeader, Button, ButtonGroup, Thumbnail, Row, Col, Navbar, MenuItem, Form, FormGroup, FormControl, ControlLabel, Glyphicon, ResponsiveEmbed, Grid} from 'react-bootstrap';
+
 class GroundInfo extends React.Component {
   render() {
     return(
       <div>
       <Row>
       <PageHeader>
-      <a href="#"><Glyphicon glyph="menu-left"> </Glyphicon> </a> Ground info
+      <a href="http://localhost:3000/"><Glyphicon glyph="menu-left"> </Glyphicon> </a> Ground info
       </PageHeader>
       </Row>
 
@@ -23,6 +24,7 @@ class GroundInfo extends React.Component {
       <Button>
       BOOK NOW
       </Button>
+
       <Button>
       <Glyphicon glyph="star-empty"> Favorite</Glyphicon>
       </Button>

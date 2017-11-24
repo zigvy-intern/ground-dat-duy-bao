@@ -7,6 +7,8 @@ import Body from '../items/components/Body.jsx';
 import Login from '../users/components/Login.jsx';
 import Ground from '../items/components/GroundFind.jsx';
 import GroundInfo from '../items/components/GroundInfo.jsx';
+import Step1 from '../items/components/Step1.jsx';
+import Step2 from '../items/components/Step2.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -60,6 +62,24 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       Meteor.logout();
       FlowRouter.go('/');
+    }
+  });
+
+  FlowRouter.route('/step1', {
+    name: 'ground.step1',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Step1 />)
+      });
+    }
+  });
+
+  FlowRouter.route('/step2', {
+    name: 'ground.step2',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Step2 />)
+      });
     }
   });
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Col, Panel, Input,FormGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
-import Footer from '../../items/components/Footer.jsx'
-
+import { Col, Input, FormGroup, Panel, FormControl, Button, Glyphicon, ToggleButton, ToggleButtonGroup, ButtonToolbar, Nav} from 'react-bootstrap';
 
 class Register extends React.Component {
   render() {
@@ -14,29 +12,42 @@ class Register extends React.Component {
               {error ? <p style={{color: 'red'}}>{error}</p> : null}
               <form>
                 <FormGroup>
-                <FormControl inputRef={user => this.refUser = user} type="user" placeholder="User Name" />
                 <FormControl inputRef={mail => this.refMail = mail} type="email" placeholder="Email" />
+                <br/>
                 <FormControl inputRef={password => this.refPass = password} type="password" placeholder="Password" />
-
+                <br/>
+                <FormControl inputRef={name => this.refName = name} type="name" placeholder="Your Name" />
+                <br/>
+                <FormControl inputRef={phoneNumber => this.refPhoneNumber = phoneNumber} type="phoneNumber" placeholder="Phone Number" />
+                <br/>
+                <FormGroup controlId="formControlsSelect">
+                <ButtonToolbar>
+                <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                  <ToggleButton value={1}>User</ToggleButton>
+                  <ToggleButton value={2}>Owner</ToggleButton>
+                </ToggleButtonGroup>
+                </ButtonToolbar>
+                <br/>
                 <Button onClick={this.create.bind(this)}
                 bsStyle="primary" type="submit" >Sign up </Button>
+                </FormGroup>
+                <br/>
+
+
                 </FormGroup>
               </form>
             </Panel>
           </Col>
-          <Footer />
         </div>
-
       )
     }
 
     create(e) {
       e.preventDefault();
       const {createUser} = this.props;
-      const user = this.refUser.value;
       const mail = this.refMail.value;
       const password = this.refPass.value;
-      createUser(user,mail,password);
+      createUser(mail,password);
     }
 }
 export default Register;
