@@ -9,6 +9,7 @@ import Ground from '../items/components/GroundFind.jsx';
 import GroundInfo from '../items/components/GroundInfo.jsx';
 import Step1 from '../items/components/Step1.jsx';
 import Step2 from '../items/components/Step2.jsx';
+import Map from '../items/components/Map.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -82,4 +83,15 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
+
+  FlowRouter.route('/map', {
+    name: 'ground.map',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Map />)
+      });
+    }
+  });
+
+
 }
